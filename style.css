@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F7F7;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+    color: #C5050C;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+img {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
