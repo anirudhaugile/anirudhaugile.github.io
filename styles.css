@@ -45,12 +45,18 @@ main {
     margin-top: 20px;
 }
 
+.academics-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 img {
-    width: 100%; /* Makes the image responsive */
-    max-width: 500px; /* Limits the maximum width */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures the image doesn't have extra space below */
-    margin: 10px auto; /* Centers the image */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
 .attribution {
