@@ -2,15 +2,6 @@
 │
 ├── index.html
 ├── styles.css
-├── images/
-│   ├── campus.jpg
-│   ├── housing.jpg
-│   ├── dining.jpg
-│   ├── academics.jpg
-│   ├── clubs.jpg
-│   ├── socials.jpg
-│   └── helpresources.jpg
-│
 ├── Housing.html
 ├── Dining.html
 ├── Academics.html
