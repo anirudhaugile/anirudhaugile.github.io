@@ -1,173 +1,131 @@
 /*
-AU: The stylesheet uses one shared visual system for every page because the assignment requires an
-external stylepage.css file instead of inline CSS. I chose an off-white page background to reduce the
-harshness of a pure white screen, then used dark navy for the header because it gives strong contrast
-with white text. Muted green is used only as an accent so links and highlighted sections remain easy
-to notice without making the design feel overly decorative. The layout has a maximum width so long
-paragraphs stay readable on desktop screens. The navigation uses flexbox because it is a simple way
-to keep links on one row when space is available while still allowing them to wrap on smaller screens.
-The topic grid also uses CSS Grid and collapses automatically based on available width. I avoided
-animations, gradients, large shadows, and JavaScript because this project is focused on clear HTML
-structure, CSS, accessibility, and content rather than complex visual effects.
+AU: I kept the CSS pretty simple so all of the pages have the same basic look. I used a light
+background with dark blue and green because those colors are easy to read and work well together.
+The page width is limited so the text does not stretch across the whole screen. The navigation is
+just a basic list displayed in one row, and it can wrap if the screen is smaller. I added borders
+between some sections instead of using cards or a lot of effects. The current page link is bold and
+underlined so it is easy to tell where you are. I also used the same font throughout most of the site
+to keep it consistent. There is no JavaScript and there are no animations. Most of the spacing is
+done with margin and padding. I wanted the site to look clean but still like a class project that was
+coded by hand rather than using a website template.
 */
-
-:root {
-  --background: #F7F4EE;
-  --navy: #17324D;
-  --green: #4F6F64;
-  --text: #222222;
-  --light-green: #E9EEE9;
-  --white: #FFFFFF;
-  --border: #CBC8C2;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--text);
+  background-color: #f6f3ec;
+  color: #222222;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .page-width {
-  width: min(900px, calc(100% - 40px));
+  max-width: 900px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .site-header {
-  background: var(--navy);
-  color: var(--white);
-  padding: 28px 0 0;
+  background-color: #17324d;
+  color: white;
+  padding-top: 22px;
+  padding-bottom: 12px;
 }
 
 .course-label {
   margin: 0;
-  font-size: 0.95rem;
-}
-
-h1,
-h2,
-h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.25;
+  font-size: 14px;
 }
 
 h1 {
-  margin: 5px 0 22px;
-  font-size: 2.4rem;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  font-size: 34px;
 }
 
 h2 {
-  color: var(--navy);
+  color: #17324d;
   margin-top: 0;
 }
 
 h3 {
-  margin-bottom: 8px;
+  color: #35574f;
+  margin-bottom: 6px;
 }
 
 .nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.nav-list li {
+  display: inline-block;
+  margin-right: 18px;
+  margin-bottom: 6px;
+}
+
 .nav-list a {
-  display: block;
-  padding: 11px 14px;
-  color: var(--white);
+  color: white;
   text-decoration: none;
 }
 
-.nav-list a:hover,
-.nav-list a:focus,
-.nav-list a.current {
-  background: var(--green);
+.nav-list a:hover {
   text-decoration: underline;
-  text-underline-offset: 4px;
+}
+
+.nav-list a.current {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 main {
-  padding-top: 40px;
-  padding-bottom: 50px;
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 35px;
 }
 
-.intro-section,
-.plain-section,
-.highlight-section,
-.resource-section,
-.topic-section {
-  margin-bottom: 42px;
+section {
+  margin-bottom: 32px;
 }
 
-.intro-section {
-  font-size: 1.08rem;
+.topic-grid article {
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
 }
 
 .highlight-section {
-  background: var(--light-green);
-  border-left: 5px solid var(--green);
-  padding: 22px 24px;
-}
-
-.topic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 20px;
-}
-
-.topic-grid article,
-.resource-section article {
-  border-top: 2px solid var(--green);
-  padding-top: 14px;
+  background-color: #edf1ed;
+  padding: 18px;
+  border: 1px solid #ccd5cf;
 }
 
 .resource-section article {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cccccc;
 }
 
 a {
-  color: #214F45;
-}
-
-a:hover,
-a:focus {
-  text-decoration-thickness: 2px;
+  color: #2d5c52;
 }
 
 footer {
-  border-top: 1px solid var(--border);
-  padding: 22px 0 30px;
-  font-size: 0.9rem;
+  border-top: 1px solid #cccccc;
+  background-color: #f6f3ec;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 14px;
 }
 
-@media (max-width: 600px) {
-  .page-width {
-    width: min(100% - 28px, 900px);
+@media screen and (max-width: 600px) {
+  .nav-list li {
+    display: block;
+    margin-bottom: 8px;
   }
 
   h1 {
-    font-size: 2rem;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-list a {
-    padding-left: 0;
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus,
-  .nav-list a.current {
-    padding-left: 10px;
+    font-size: 28px;
   }
 }
