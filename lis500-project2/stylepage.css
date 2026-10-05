@@ -1,128 +1,143 @@
 /*
-AU: I kept the CSS pretty simple so all of the pages have the same basic look. I used a light
-background with dark blue and green because those colors are easy to read and work well together.
-The page width is limited so the text does not stretch across the whole screen. The navigation is
-just a basic list displayed in one row, and it can wrap if the screen is smaller. I added borders
-between some sections instead of using cards or a lot of effects. The current page link is bold and
-underlined so it is easy to tell where you are. I also used the same font throughout most of the site
-to keep it consistent. There is no JavaScript and there are no animations. Most of the spacing is
-done with margin and padding. I wanted the site to look clean but still like a class project that was
-coded by hand rather than using a website template.
+AU: I changed the design to keep it very basic and easy to follow. I used a white background,
+black text, a normal serif font, and simple borders. I did not want the page to look like a template
+or a professional website. The navigation is just a row of links with a gray background and borders.
+The current page is highlighted with a light yellow color so it is easy to see. I kept the page width
+fairly wide and used normal margins and spacing instead of cards or complicated layouts. The sections
+are separated mostly by whitespace and a few thin lines. There are no shadows, gradients, animations,
+or JavaScript effects. Links are blue like a normal website. I also kept the mobile rule very simple
+so the navigation stacks when the screen gets small. The goal was to make the site readable and
+consistent without making it look too designed.
 */
 
 body {
   margin: 0;
-  background-color: #f6f3ec;
-  color: #222222;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  background-color: white;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .page-width {
-  max-width: 900px;
+  width: 92%;
+  max-width: 1050px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .site-header {
-  background-color: #17324d;
-  color: white;
-  padding-top: 22px;
-  padding-bottom: 12px;
+  background-color: white;
+  color: black;
+  padding-top: 20px;
 }
 
 .course-label {
-  margin: 0;
-  font-size: 14px;
+  margin: 0 0 5px 0;
+  font-size: 15px;
 }
 
 h1 {
-  margin-top: 4px;
-  margin-bottom: 15px;
-  font-size: 34px;
+  font-size: 32px;
+  margin: 0 0 18px 0;
 }
 
 h2 {
-  color: #17324d;
+  font-size: 24px;
+  color: black;
   margin-top: 0;
 }
 
 h3 {
-  color: #35574f;
-  margin-bottom: 6px;
+  font-size: 19px;
+  color: black;
+  margin-bottom: 5px;
 }
 
 .nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  border-top: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+  background-color: #eeeeee;
 }
 
 .nav-list li {
   display: inline-block;
-  margin-right: 18px;
-  margin-bottom: 6px;
+  margin: 0;
 }
 
 .nav-list a {
-  color: white;
+  display: block;
+  padding: 8px 18px;
+  color: black;
   text-decoration: none;
+  border-right: 1px solid #aaaaaa;
 }
 
 .nav-list a:hover {
+  background-color: #dddddd;
   text-decoration: underline;
 }
 
 .nav-list a.current {
+  background-color: #fff3b0;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 main {
-  background-color: white;
-  padding-top: 30px;
-  padding-bottom: 35px;
+  padding-top: 28px;
+  padding-bottom: 30px;
 }
 
 section {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .topic-grid article {
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 18px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .highlight-section {
-  background-color: #edf1ed;
-  padding: 18px;
-  border: 1px solid #ccd5cf;
+  padding: 12px 15px;
+  background-color: #f3f3f3;
+  border: 1px solid #bbbbbb;
 }
 
 .resource-section article {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #cccccc;
 }
 
 a {
-  color: #2d5c52;
+  color: blue;
+}
+
+a:visited {
+  color: purple;
 }
 
 footer {
-  border-top: 1px solid #cccccc;
-  background-color: #f6f3ec;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  width: 92%;
+  max-width: 1050px;
+  margin: 0 auto;
+  border-top: 1px solid #999999;
+  padding-top: 12px;
+  padding-bottom: 20px;
   font-size: 14px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .nav-list li {
     display: block;
-    margin-bottom: 8px;
+  }
+
+  .nav-list a {
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
   }
 
   h1 {
