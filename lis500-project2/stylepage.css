@@ -1,0 +1,173 @@
+/*
+AU: The stylesheet uses one shared visual system for every page because the assignment requires an
+external stylepage.css file instead of inline CSS. I chose an off-white page background to reduce the
+harshness of a pure white screen, then used dark navy for the header because it gives strong contrast
+with white text. Muted green is used only as an accent so links and highlighted sections remain easy
+to notice without making the design feel overly decorative. The layout has a maximum width so long
+paragraphs stay readable on desktop screens. The navigation uses flexbox because it is a simple way
+to keep links on one row when space is available while still allowing them to wrap on smaller screens.
+The topic grid also uses CSS Grid and collapses automatically based on available width. I avoided
+animations, gradients, large shadows, and JavaScript because this project is focused on clear HTML
+structure, CSS, accessibility, and content rather than complex visual effects.
+*/
+
+:root {
+  --background: #F7F4EE;
+  --navy: #17324D;
+  --green: #4F6F64;
+  --text: #222222;
+  --light-green: #E9EEE9;
+  --white: #FFFFFF;
+  --border: #CBC8C2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+.page-width {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 28px 0 0;
+}
+
+.course-label {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 5px 0 22px;
+  font-size: 2.4rem;
+}
+
+h2 {
+  color: var(--navy);
+  margin-top: 0;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 11px 14px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.current {
+  background: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.intro-section,
+.plain-section,
+.highlight-section,
+.resource-section,
+.topic-section {
+  margin-bottom: 42px;
+}
+
+.intro-section {
+  font-size: 1.08rem;
+}
+
+.highlight-section {
+  background: var(--light-green);
+  border-left: 5px solid var(--green);
+  padding: 22px 24px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.topic-grid article,
+.resource-section article {
+  border-top: 2px solid var(--green);
+  padding-top: 14px;
+}
+
+.resource-section article {
+  margin-bottom: 28px;
+}
+
+a {
+  color: #214F45;
+}
+
+a:hover,
+a:focus {
+  text-decoration-thickness: 2px;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 0 30px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .page-width {
+    width: min(100% - 28px, 900px);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list a {
+    padding-left: 0;
+  }
+
+  .nav-list a:hover,
+  .nav-list a:focus,
+  .nav-list a.current {
+    padding-left: 10px;
+  }
+}
