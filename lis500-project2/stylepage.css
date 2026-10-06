@@ -144,3 +144,41 @@ footer {
 		font-size: 28px;
 	}
 }
+/* LS: everything below is for the About Us and Tech Hero pages. I tried to match the plain style
+   Anirudha set up above, so it's just gray borders and normal spacing, no extra colors */
+
+/* LS: puts our two bios side by side on a laptop and stacks them on a phone */
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 25px;
+}
+
+/* LS: thin line on top of each bio so they look like separate sections, same kind of line as the topic grid */
+.team-member {
+	border-top: 1px solid #bbbbbb;
+	padding-top: 10px;
+}
+
+/* LS: the major / job title line under each name */
+.role {
+	font-style: italic;
+	margin-top: 0;
+}
+
+/* LS: gray line on the left of the tech hero bio so it reads like a profile */
+.hero-bio {
+	border-left: 3px solid #bbbbbb;
+	padding-left: 18px;
+}
+
+/* LS: little extra space between the links in the learn more list */
+.resource-links li {
+	margin-bottom: 8px;
+}
+
+/* LS: outline shows up when you tab through links with the keyboard, for accessibility */
+a:focus {
+	outline: 2px solid black;
+	outline-offset: 2px;
+}
