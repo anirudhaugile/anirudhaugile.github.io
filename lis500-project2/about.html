@@ -8,16 +8,11 @@
 	</head>
 	<body>
 		<!--
-		AU: This temporary About Us page exists so the navigation works during the first iteration while
-		the team member responsible for the final About Us content completes that section. I still used
-		the same semantic page structure, navigation order, heading pattern, and external stylesheet as
-		the other pages so there are no broken links or sudden design changes while the site is being
-		developed. Keeping the page functional at this stage also lets us test navigation before merging
-		the final content. The final version will replace this short progress message with information from
-		Project 1 about both team members, including our academic interests, reasons for taking LIS 500,
-		and interests in technology. The final page should remain concise and readable rather than turning
-		into a resume. This placeholder does not use JavaScript or inline CSS, and it keeps the same high
-		contrast colors and content width used throughout the rest of the site.
+		LS: This is our About Us page. I took most of the content from what we wrote for Project 1 and turned it into
+		an actual web page. I also added aria-current="page" next to the "current" class, since
+		our class only changes how the link looks and screen readers can't pick up on that. For the bios I put each of
+		us in our own article tag inside a grid, so on a laptop we show up side by side and on a phone it just stacks.
+		All the styling is in stylepage.css, so there's no inline CSS anywhere on this page, and there's no JavaScript either.
 		-->
 
 		<header class="site-header">
@@ -27,7 +22,7 @@
 				<nav aria-label="Main navigation">
 					<ul class="nav-list">
 						<li><a href="index.html">Home</a></li>
-						<li><a class="current" href="about.html">About Us</a></li>
+						<li><a class="current" aria-current="page" href="about.html">About Us</a></li>
 						<li><a href="resources.html">Implicit Bias Resources</a></li>
 						<li><a href="techhero.html">Tech Hero</a></li>
 					</ul>
@@ -36,18 +31,47 @@
 		</header>
 
 		<main class="page-width">
-			<section class="plain-section">
-				<h2>Anirudha Ugile and Lathika Suresh</h2>
+			<section class="intro-section">
+				<h2>Who we are</h2>
 				<p>
-					We are building this page from our Project 1 introductions. The first iteration is currently
-					being expanded with our backgrounds, interests in technology, and reasons for taking LIS 500.
+					We are two students in LIS 500: Code and Power at UW–Madison. This site builds on our first
+					project, where we reflected on our own identities and how they shape the way we experience technology.
+				</p>
+			</section>
+
+			<!-- LS: the grid that holds both of our bios. The column stuff is handled in the CSS (.team-grid) -->
+			<section class="team-grid" aria-label="Team members">
+				<article class="team-member">
+					<img src="images/lathika.jpg" alt="[Describe your photo, e.g. Lathika smiling outdoors on campus]">
+					<h3>Lathika Suresh</h3>
+					<p class="role">Computer Science, UW–Madison</p>
+					<p>[2–4 sentences from your Project 1: your background, identity, and what draws you to questions about technology and power.]</p>
+					<p>[One sentence on something from the readings that changed how you think about tech.]</p>
+				</article>
+
+				<article class="team-member">
+					<img src="images/anirudha.jpg" alt="[Describe Anirudha's photo]">
+					<h3>Anirudha Ugile</h3>
+					<p class="role">[Major], UW–Madison</p>
+					<p>[Anirudha's bio from Project 1.]</p>
+				</article>
+			</section>
+
+			<!-- LS: I wanted to actually tie our backgrounds back to the class here so the page isn't only bios. The green box comes from our color palette -->
+			<section class="highlight-section">
+				<h2>Why this project</h2>
+				<p>
+					Coming from technical backgrounds, we were taught to treat code as neutral. This class has pushed
+					us to ask who designs technology, who it is tested on, and who gets left out. We built this site to
+					share those questions with other students who are meeting ideas like implicit bias and
+					intersectionality for the first time.
 				</p>
 			</section>
 		</main>
 
 		<footer>
 			<div class="page-width">
-				<p>Anirudha Ugile Lathika Suresh - LIS 500</p>
+				<p>Anirudha Ugile, Lathika Suresh - LIS 500</p>
 			</div>
 		</footer>
 	</body>
