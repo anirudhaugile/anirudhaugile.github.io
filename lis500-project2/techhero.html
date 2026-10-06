@@ -3,21 +3,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tech Hero | LIS 500 Project 2</title>
+		<title>Tech Hero: Joy Buolamwini | LIS 500 Project 2</title>
 		<link rel="stylesheet" href="stylepage.css">
 	</head>
 	<body>
 		<!--
-		AU: This temporary Tech Hero page keeps the site navigation complete while our final profile is
-		being written. The assignment asks for a short profile of someone who challenges norms in the
-		technology space and advances equity related to race, class, or gender. Rather than placing a
-		generic biography here before our teammate finishes that research, this page clearly marks the
-		section as part of the first iteration. It uses the same header, navigation, page width, typography,
-		and footer as the rest of the site so we can test the complete multipage structure early. The final
-		version should include a focused profile under 300 words, useful external links, and accessible
-		media with alternative text if an image is used. The page is intentionally simple, with no inline
-		styles, animation, or JavaScript. This makes it easier to replace the temporary content without
-		changing the overall layout or creating inconsistencies in the shared CSS file later.
+		LS: This is the Tech Hero page. I picked Joy Buolamwini because her research is basically a real-life example
+		of everything this class talks about. She showed that facial recognition, which a lot of people assume is
+		neutral, actually works way worse for darker-skinned women, and that's intersectionality showing up in code.
+		I split the page into two parts: the bio first, then a "Learn more" box with links so people can keep reading
+		on their own. The bio sits in a section with a left border in our green accent color so it reads like a
+		profile and not just a wall of text. The nav is the same as every other page, and I added aria-current so
+		screen readers know which page you're on. I kept the bio under the 300 word limit.
 		-->
 
 		<header class="site-header">
@@ -29,25 +26,57 @@
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li><a href="resources.html">Implicit Bias Resources</a></li>
-						<li><a class="current" href="techhero.html">Tech Hero</a></li>
+						<li><a class="current" aria-current="page" href="techhero.html">Tech Hero</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
 		<main class="page-width">
-			<section class="plain-section">
-				<h2>Profile in progress</h2>
+			<section class="hero-bio">
+				<h2>Joy Buolamwini</h2>
+				<p class="role">Founder, Algorithmic Justice League</p>
+
 				<p>
-					Our Tech Hero profile is being prepared for the first iteration. This page will feature someone
-					whose work challenges inequity in technology and provides leadership around race, class, or gender.
+					Joy Buolamwini is a computer scientist and digital activist. While she was a graduate student at
+					the MIT Media Lab, she found that face-tracking software couldn't detect her dark skinned face
+					until she put on a white mask. That moment pushed her to study how AI systems treat different people.
 				</p>
+				<p>
+					Her research project, Gender Shades, tested commercial facial analysis tools from major tech
+					companies. The tools were nearly perfect for lighter skinned men but made far more mistakes on
+					darker skinned women. Several of the companies improved their systems after the results came out.
+				</p>
+				<p>
+					In 2016 she founded the Algorithmic Justice League, an organization that helps to raise awareness 
+					about AI harms. She has testified before Congress, appeared in the
+					documentary Coded Bias, and wrote the book Unmasking AI (2023).
+				</p>
+
+				<!-- LS: this paragraph is my own take, connecting her work back to what we've been reading in class -->
+				<p>
+					Her work is a clear example of intersectionality in technology. Looking at gender alone or race alone
+					would have hidden the problem. The biggest errors showed up for people who were both women and
+					darker skinned. It also shows how implicit bias gets built into systems. Nobody had to intend harm.
+					The training data just didn't include enough people who look like her.
+				</p>
+			</section>
+
+			<!-- LS: links to learn more. I made the link text say where it goes instead of "click here" since that's better for accessibility -->
+			<section class="highlight-section">
+				<h2>Learn more</h2>
+				<ul class="resource-links">
+					<li><a href="https://www.ajl.org/">Algorithmic Justice League</a>: the organization she founded</li>
+					<li><a href="http://gendershades.org/">Gender Shades</a>: her research project on facial recognition bias</li>
+					<li><a href="https://www.codedbias.com/">Coded Bias</a>: the documentary featuring her work</li>
+					<li><a href="https://www.poetofcode.com/">Poet of Code</a>: her personal website</li>
+				</ul>
 			</section>
 		</main>
 
 		<footer>
 			<div class="page-width">
-				<p>Anirudha Ugile Lathika Suresh - LIS 500</p>
+				<p>Anirudha Ugile, Lathika Suresh - LIS 500</p>
 			</div>
 		</footer>
 	</body>
