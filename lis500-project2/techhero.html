@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tech Hero: Joy Buolamwini | LIS 500 Project 2</title>
+		<title>Tech Heroes | LIS 500 Project 2</title>
 		<link rel="stylesheet" href="stylepage.css">
 	</head>
 	<body>
@@ -20,57 +20,127 @@
 		<header class="site-header">
 			<div class="page-width">
 				<p class="course-label">LIS 500: Code and Power</p>
-				<h1>Tech Hero</h1>
+				<h1>Tech Heroes</h1>
 				<nav aria-label="Main navigation">
 					<ul class="nav-list">
 						<li><a href="index.html">Home</a></li>
 						<li><a href="about.html">About Us</a></li>
 						<li><a href="resources.html">Implicit Bias Resources</a></li>
-						<li><a class="current" aria-current="page" href="techhero.html">Tech Hero</a></li>
+						<li><a class="current" aria-current="page" href="techhero.html">Tech Heroes</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
 		<main class="page-width">
-			<section class="hero-bio">
-				<h2>Joy Buolamwini</h2>
-				<p class="role">Founder, Algorithmic Justice League</p>
+			<!-- AU: After the Oct. 7 project update said each group member needs a different Tech Hero, I reviewed this page and added a second profile. I also added images, captions, and embedded media so the page works more like a web resource instead of only a text page. -->
 
-				<p>
-					Joy Buolamwini is a computer scientist and digital activist. While she was a graduate student at
-					the MIT Media Lab, she found that face-tracking software couldn't detect her dark skinned face
-					until she put on a white mask. That moment pushed her to study how AI systems treat different people.
-				</p>
-				<p>
-					Her research project, Gender Shades, tested commercial facial analysis tools from major tech
-					companies. The tools were nearly perfect for lighter skinned men but made far more mistakes on
-					darker skinned women. Several of the companies improved their systems after the results came out.
-				</p>
-				<p>
-					In 2016 she founded the Algorithmic Justice League, an organization that helps to raise awareness 
-					about AI harms. She has testified before Congress, appeared in the
-					documentary Coded Bias, and wrote the book Unmasking AI (2023).
-				</p>
+			<section class="hero-entry">
+				<div class="hero-layout">
+					<figure class="hero-figure">
+						<img
+							class="hero-photo"
+							src="https://dai-global-digital.com/uploads/1579368606627.jfif"
+							alt="Portrait of Joy Buolamwini wearing white glasses"
+							loading="lazy">
+						<figcaption>Joy Buolamwini. Image source: DAI Global Digital.</figcaption>
+					</figure>
 
-				<!-- LS: this paragraph is my own take, connecting her work back to what we've been reading in class -->
-				<p>
-					Her work is a clear example of intersectionality in technology. Looking at gender alone or race alone
-					would have hidden the problem. The biggest errors showed up for people who were both women and
-					darker skinned. It also shows how implicit bias gets built into systems. Nobody had to intend harm.
-					The training data just didn't include enough people who look like her.
-				</p>
+					<div class="hero-bio">
+						<h2>Joy Buolamwini</h2>
+						<p class="role">Founder, Algorithmic Justice League</p>
+
+						<p>
+							Joy Buolamwini is a computer scientist and digital activist. While she was a graduate student at
+							the MIT Media Lab, she found that face-tracking software couldn't detect her dark skinned face
+							until she put on a white mask. That moment pushed her to study how AI systems treat different people.
+						</p>
+						<p>
+							Her research project, Gender Shades, tested commercial facial analysis tools from major tech
+							companies. The tools were nearly perfect for lighter skinned men but made far more mistakes on
+							darker skinned women. Several of the companies improved their systems after the results came out.
+						</p>
+						<p>
+							In 2016 she founded the Algorithmic Justice League, an organization that helps to raise awareness
+							about AI harms. She has testified before Congress, appeared in the
+							documentary Coded Bias, and wrote the book Unmasking AI (2023).
+						</p>
+
+						<!-- LS: this paragraph is my own take, connecting her work back to what we've been reading in class -->
+						<p>
+							Her work is a clear example of intersectionality in technology. Looking at gender alone or race alone
+							would have hidden the problem. The biggest errors showed up for people who were both women and
+							darker skinned. It also shows how implicit bias gets built into systems. Nobody had to intend harm.
+							The training data just didn't include enough people who look like her.
+						</p>
+					</div>
+				</div>
+
+				<!-- LS: links to learn more. I made the link text say where it goes instead of "click here" since that's better for accessibility -->
+				<div class="highlight-section">
+					<h3>Learn more about Joy</h3>
+					<ul class="resource-links">
+						<li><a href="https://www.ajl.org/" target="_blank" rel="noopener">Algorithmic Justice League</a>: the organization she founded</li>
+						<li><a href="http://gendershades.org/" target="_blank" rel="noopener">Gender Shades</a>: her research project on facial recognition bias</li>
+						<li><a href="https://www.codedbias.com/" target="_blank" rel="noopener">Coded Bias</a>: the documentary featuring her work</li>
+						<li><a href="https://www.poetofcode.com/" target="_blank" rel="noopener">Poet of Code</a>: her personal website</li>
+					</ul>
+				</div>
 			</section>
 
-			<!-- LS: links to learn more. I made the link text say where it goes instead of "click here" since that's better for accessibility -->
-			<section class="highlight-section">
-				<h2>Learn more</h2>
-				<ul class="resource-links">
-					<li><a href="https://www.ajl.org/">Algorithmic Justice League</a>: the organization she founded</li>
-					<li><a href="http://gendershades.org/">Gender Shades</a>: her research project on facial recognition bias</li>
-					<li><a href="https://www.codedbias.com/">Coded Bias</a>: the documentary featuring her work</li>
-					<li><a href="https://www.poetofcode.com/">Poet of Code</a>: her personal website</li>
-				</ul>
+			<section class="hero-entry">
+				<div class="hero-layout">
+					<figure class="hero-figure">
+						<img
+							class="hero-photo"
+							src="https://www.niso.org/sites/default/files/2025-02/Timnit%20Gebru%20%20-%20Sq%20Crop_0.png"
+							alt="Portrait of AI researcher Timnit Gebru"
+							loading="lazy">
+						<figcaption>Timnit Gebru. Image source: NISO.</figcaption>
+					</figure>
+
+					<div class="hero-bio">
+						<h2>Timnit Gebru</h2>
+						<p class="role">Founder and Executive Director, Distributed AI Research Institute</p>
+
+						<p>
+							Timnit Gebru is a computer scientist and AI researcher whose work focuses on bias, accountability,
+							and the people affected by automated systems. She earned her PhD in computer vision at Stanford and
+							later worked on ethical AI research at Microsoft and Google.
+						</p>
+						<p>
+							Gebru also co-founded Black in AI, which works to increase the presence and visibility of Black
+							people in artificial intelligence. She later founded the Distributed AI Research Institute, or DAIR,
+							to support independent research that is not controlled by the priorities of large technology companies.
+						</p>
+						<p>
+							I chose Gebru because her work connects technical research with questions about who has power in AI.
+							Her work pushes back against the idea that bigger or more automated systems are automatically better.
+							It also connects to intersectionality because she asks whose experiences are represented in data,
+							who is most exposed to harm, and who gets a voice when technology is designed.
+						</p>
+					</div>
+				</div>
+
+				<!-- AU: These links and the video let readers move beyond the short profile and hear directly from Gebru. -->
+				<div class="highlight-section">
+					<h3>Learn more about Timnit</h3>
+					<ul class="resource-links">
+						<li><a href="https://www.dair-institute.org/" target="_blank" rel="noopener">Distributed AI Research Institute</a></li>
+						<li><a href="https://www.niso.org/people/dr-timnit-gebru" target="_blank" rel="noopener">NISO profile of Timnit Gebru</a></li>
+						<li><a href="https://blackinai.org/" target="_blank" rel="noopener">Black in AI</a></li>
+					</ul>
+
+					<div class="video-frame">
+						<iframe
+							src="https://www.youtube.com/embed/aCB-NQtsKrs"
+							title="Timnit Gebru discussing AI ethics and algorithmic bias"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
 			</section>
 		</main>
 
