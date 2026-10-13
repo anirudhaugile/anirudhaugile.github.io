@@ -29,6 +29,7 @@ body {
 	background-color: white;
 	color: black;
 	padding-top: 24px;
+	border-top: 6px solid #2f5d62;
 }
 
 .course-label {
@@ -46,13 +47,13 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	color: black;
+	color: #23484c;
 	margin-top: 0;
 }
 
 h3 {
 	font-size: 19px;
-	color: black;
+	color: #2f5d62;
 	margin-bottom: 5px;
 }
 
@@ -85,8 +86,9 @@ h3 {
 }
 
 .nav-list a.current {
-	background-color: #ffefad;
+	background-color: #dcebec;
 	font-weight: bold;
+	border-bottom: 3px solid #2f5d62;
 }
 
 main {
@@ -101,16 +103,16 @@ section {
 .topic-grid article {
 	margin-bottom: 18px;
 	padding: 12px 14px;
-	border-left: 3px solid #cccccc;
-	border-bottom: 1px solid #dddddd;
-	background-color: white;
+	border-left: 4px solid #4f7f84;
+	border-bottom: 1px solid #d4dede;
+	background-color: #fbfdfd;
 }
 
 .highlight-section {
 	padding: 14px 16px;
-	background-color: #f5f5f5;
-	border: 1px solid #bbbbbb;
-	border-left: 4px solid #777777;
+	background-color: #eef6f6;
+	border: 1px solid #bdd0d1;
+	border-left: 4px solid #2f5d62;
 }
 
 .resource-section article {
@@ -132,7 +134,7 @@ footer {
 	width: 92%;
 	max-width: 1050px;
 	margin: 0 auto;
-	border-top: 1px solid #999999;
+	border-top: 3px solid #7fa4a7;
 	padding-top: 12px;
 	padding-bottom: 20px;
 	font-size: 14px;
@@ -164,7 +166,7 @@ footer {
 
 /* LS: thin line on top of each bio so they look like separate sections, same kind of line as the topic grid */
 .team-member {
-	border-top: 2px solid #bbbbbb;
+	border-top: 3px solid #7fa4a7;
 	padding-top: 12px;
 }
 
@@ -176,7 +178,7 @@ footer {
 
 /* LS: gray line on the left of the tech hero bio so it reads like a profile */
 .hero-bio {
-	border-left: 3px solid #bbbbbb;
+	border-left: 4px solid #4f7f84;
 	padding-left: 18px;
 }
 
@@ -214,7 +216,7 @@ a:focus {
 	width: 100%;
 	max-width: 260px;
 	height: auto;
-	border: 1px solid #777777;
+	border: 3px solid #dcebec;
 	border-radius: 4px;
 }
 
@@ -240,8 +242,9 @@ a:focus {
 
 .media-section {
 	margin-top: 35px;
-	padding-top: 15px;
-	border-top: 1px solid #bbbbbb;
+	padding: 18px;
+	border-top: 3px solid #4f7f84;
+	background-color: #f7fbfb;
 }
 
 @media screen and (max-width: 700px) {
@@ -266,4 +269,20 @@ a:focus {
 .topic-grid h3,
 .resource-section h3 {
 	margin-top: 0;
+}
+
+
+/* AU: Small color pass for the final version. I used one muted teal accent and pale backgrounds
+   to add visual hierarchy while keeping the site simple, readable, and consistent with the original design. */
+.intro-section {
+	border-left: 4px solid #2f5d62;
+	padding-left: 16px;
+}
+
+.resource-section article:hover {
+	background-color: #f7fbfb;
+}
+
+.role {
+	color: #555555;
 }
