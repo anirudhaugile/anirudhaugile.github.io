@@ -8,20 +8,19 @@
 	</head>
 	<body>
 		<!--
-		AU: This is the home page and main entry point for our project. For the final iteration I changed the layout
-		from a mostly plain text page into a more visual editorial-style page. I still kept the HTML simple: one header,
-		one navigation menu, a hero section, a three-part topic grid, and a closing section. The numbered cards help
-		visitors understand the structure of the site without needing JavaScript or a template. The layout is responsive
-		and all of the visual treatment comes from the external stylesheet.
+		AU: This is the home page; it is designed to be a very simple portal to our LIS 500 project. I kept the structure simple so that the
+		content is not lost or difficult to follow and so that the design is not a distraction from the ideas. Navigation appears at the top of every
+		page so visitors may navigate easily between the four required sections without running into their browser back button.
+		I used semantic elements such as header, nav, main, section, and footer because these make the structure more clear to humans and screen readers.
+		The heading order begins with one h1 element and then contains h2 sections. No JavaScript is used because this project is meant to be built only
+		with HTML and CSS. The external style sheet is shared across all pages and not applied inline to any individual page. The color palette is dark,
+		muted, high-contrast colors, and the width of the site contents is wide with some padding so that the text is easy to read.
 		-->
 
-		<header class="site-header home-header">
+		<header class="site-header">
 			<div class="page-width">
-				<div class="header-topline">
-					<p class="course-label">LIS 500: Code and Power</p>
-					<p class="project-mark">PROJECT 02</p>
-				</div>
-				<h1>Code, power, and the people in between.</h1>
+				<p class="course-label">LIS 500: Code and Power</p>
+				<h1>Project 2</h1>
 				<nav aria-label="Main navigation">
 					<ul class="nav-list">
 						<li><a class="current" aria-current="page" href="index.html">Home</a></li>
@@ -33,79 +32,57 @@
 			</div>
 		</header>
 
-		<main>
-			<div class="page-width">
-				<section class="home-hero">
-					<div class="hero-copy">
-						<p class="eyebrow">TECHNOLOGY IS NOT NEUTRAL</p>
-						<h2>Technology is not separate from society.</h2>
-						<p class="lead">
-							This site considers technology in terms of issues of power, bias, identity, and responsibility.
-							We want to examine what occurs when systems that on the surface seem neutral have been influenced
-							by human decisions, social dynamics, and unequal distribution of power.
-						</p>
-						<p>
-							As well as tackling these topics of implicit bias, intersectionality and challenging unfair
-							tech norms, our project is working to explain these concepts so that if you're new to them,
-							it's easy to understand and relate it back to tech we all use.
-						</p>
-					</div>
+		<main class="page-width">
+			<section class="intro-section">
+				<h2>Technology is not separate from society</h2>
+				<p>
+					This site considers technology in terms of issues of power, bias, identity, and responsibility.
+					We want to examine what occurs when systems that on the surface seem neutral have been influenced
+					by human decisions, social dynamics, and unequal distribution of power.
+				</p>
+				<p>
+					As well as tackling these topics of implicit bias, intersectionality and challenging unfair
+					tech norms, our project is working to explain these concepts so that if you're new to them,
+					it's easy to understand and relate it back to tech we all use.
+				</p>
+			</section>
 
-					<div class="hero-side" aria-hidden="true">
-						<div class="word-block">CODE</div>
-						<div class="word-block alt">POWER</div>
-						<div class="word-block small">PEOPLE</div>
-					</div>
-				</section>
+			<section class="topic-section">
+				<h3>What you will find here</h3>
+				<div class="topic-grid">
+					<article>
+						<h3>About Us</h3>
+						<a href="about.html">Meet the team</a>
+					</article>
 
-				<section class="topic-section">
-					<div class="section-heading">
-						<p class="eyebrow">EXPLORE THE PROJECT</p>
-						<h2>Three places to start</h2>
-					</div>
+					<article>
+						<h3>Implicit Bias</h3>
+						<p>Starts with the basics of implicit bias and intersectionality then explore useful resources.</p>
+						<a href="resources.html">View the resource guide</a>
+					</article>
 
-					<div class="topic-grid">
-						<article>
-							<p class="card-number">01</p>
-							<h3>About Us</h3>
-							<p>Who we are, what brought us to this course, and how our technical backgrounds shape the way we think about these questions.</p>
-							<a class="text-link" href="about.html">Meet the team →</a>
-						</article>
+					<article>
+						<h3>Tech Heroes</h3>
+						<p>Read about two researchers using technology to challenge inequity, bias, and unequal access to power.</p>
+						<a href="techhero.html">View the profile</a>
+					</article>
+				</div>
+			</section>
 
-						<article>
-							<p class="card-number">02</p>
-							<h3>Implicit Bias</h3>
-							<p>Starts with the basics of implicit bias and intersectionality, then moves into our own reflection and outside resources.</p>
-							<a class="text-link" href="resources.html">View the resource guide →</a>
-						</article>
-
-						<article>
-							<p class="card-number">03</p>
-							<h3>Tech Heroes</h3>
-							<p>Read about Joy Buolamwini and Timnit Gebru, two researchers challenging bias, inequity, and concentrated power in AI.</p>
-							<a class="text-link" href="techhero.html">View the profiles →</a>
-						</article>
-					</div>
-				</section>
-
-				<section class="approach-section">
-					<div class="approach-label">OUR APPROACH</div>
-					<div>
-						<h2>Bias is not just an individual problem.</h2>
-						<p>
-							Because technology is created within social systems, issues around data, design, testing and representation
-							all come into play. In this site we try to relate those ideas to actual technical systems and people's everyday
-							digital lives by bringing in examples and outside resources.
-						</p>
-					</div>
-				</section>
-			</div>
+			<section class="plain-section">
+				<h2>Our approach</h2>
+				<p>
+					We don't want to see bias as just an individual problem. Because technology is created within
+					social systems, issues around data, design, testing and representation all come into play. In
+					this site we try to relate those ideas to actual technical systems and people's everyday digital
+					lives by bringing in examples and outside resources.
+				</p>
+			</section>
 		</main>
 
 		<footer>
-			<div class="page-width footer-inner">
-				<p>Anirudha Ugile + Lathika Suresh</p>
-				<p>LIS 500 · Fall 2026</p>
+			<div class="page-width">
+				<p>Anirudha Ugile, Lathika Suresh - LIS 500</p>
 			</div>
 		</footer>
 	</body>
