@@ -12,11 +12,11 @@ consistent without making it look too designed.
 
 body {
 	margin: 0;
-	background-color: white;
-	color: black;
+	background-color: #fcfcfc;
+	color: #1f1f1f;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 16px;
-	line-height: 1.45;
+	line-height: 1.55;
 }
 
 .page-width {
@@ -28,17 +28,20 @@ body {
 .site-header {
 	background-color: white;
 	color: black;
-	padding-top: 20px;
+	padding-top: 24px;
 }
 
 .course-label {
-	margin: 0 0 5px 0;
-	font-size: 15px;
+	margin: 0 0 6px 0;
+	font-size: 14px;
+	color: #555555;
+	letter-spacing: 0.4px;
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 34px;
 	margin: 0 0 18px 0;
+	letter-spacing: -0.3px;
 }
 
 h2 {
@@ -57,9 +60,9 @@ h3 {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #777777;
-	border-bottom: 1px solid #777777;
-	background-color: #eeeeee;
+	border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	background-color: #f1f1f1;
 }
 
 .nav-list li {
@@ -76,18 +79,19 @@ h3 {
 }
 
 .nav-list a:hover {
-	background-color: #dddddd;
+	background-color: #e2e2e2;
 	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 .nav-list a.current {
-	background-color: #fff3b0;
+	background-color: #ffefad;
 	font-weight: bold;
 }
 
 main {
-	padding-top: 28px;
-	padding-bottom: 30px;
+	padding-top: 32px;
+	padding-bottom: 36px;
 }
 
 section {
@@ -95,15 +99,18 @@ section {
 }
 
 .topic-grid article {
-	margin-bottom: 20px;
-	padding-bottom: 12px;
-	border-bottom: 1px solid #bbbbbb;
+	margin-bottom: 18px;
+	padding: 12px 14px;
+	border-left: 3px solid #cccccc;
+	border-bottom: 1px solid #dddddd;
+	background-color: white;
 }
 
 .highlight-section {
-	padding: 12px 15px;
-	background-color: #f3f3f3;
+	padding: 14px 16px;
+	background-color: #f5f5f5;
 	border: 1px solid #bbbbbb;
+	border-left: 4px solid #777777;
 }
 
 .resource-section article {
@@ -113,7 +120,8 @@ section {
 }
 
 a {
-	color: blue;
+	color: #0645ad;
+	text-underline-offset: 2px;
 }
 
 a:visited {
@@ -156,8 +164,8 @@ footer {
 
 /* LS: thin line on top of each bio so they look like separate sections, same kind of line as the topic grid */
 .team-member {
-	border-top: 1px solid #bbbbbb;
-	padding-top: 10px;
+	border-top: 2px solid #bbbbbb;
+	padding-top: 12px;
 }
 
 /* LS: the major / job title line under each name */
@@ -207,6 +215,7 @@ a:focus {
 	max-width: 260px;
 	height: auto;
 	border: 1px solid #777777;
+	border-radius: 4px;
 }
 
 .hero-figure figcaption {
@@ -226,6 +235,7 @@ a:focus {
 	width: 100%;
 	height: 100%;
 	border: 1px solid #777777;
+	border-radius: 4px;
 }
 
 .media-section {
@@ -242,4 +252,18 @@ a:focus {
 	.hero-photo {
 		max-width: 320px;
 	}
+}
+
+
+/* AU: Small final polish after peer review. I kept the original plain design, but slightly improved spacing,
+   link readability, section separation, and the presentation of media without changing the site's structure. */
+.intro-section p,
+.plain-section p,
+.hero-bio p {
+	max-width: 820px;
+}
+
+.topic-grid h3,
+.resource-section h3 {
+	margin-top: 0;
 }
