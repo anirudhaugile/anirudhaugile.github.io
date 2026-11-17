@@ -27,19 +27,21 @@
 		<section>
 			<h2>Water Bottle or Notebook?</h2>
 			<p>By Anirudha Ugile and Lathika Suresh</p>
-			<p>This is our first iteration of an image classifier trained with Google Teachable Machine. It attempts to identify whether a webcam image shows a water bottle or a notebook.</p>
+			<p>This is our first iteration of an image classifier trained with Google Teachable Machine. It classifies webcam images as water bottle, notebook, or other / neither.</p>
 		</section>
 		<section>
 			<h2>Training samples</h2>
 			<ul>
-				<li>Original prototype: 138 water bottle images and 164 notebook images</li>
-				<li>Updated model: retrained with an additional Other / Neither class</li>
+				<li>Water bottle: 1,094 images</li>
+				<li>Notebook: 703 images</li>
+				<li>Other / Neither: 1,405 images</li>
+				<li>Total: 3,202 images</li>
 			</ul>
-			<p>The sample counts above describe the earlier two-class version. We will document the updated model's sample counts, individual contributions, and testing in the final iteration.</p>
+			<p>The current version has three classes. We will document how we collected the samples, each group member's contribution, and the results of testing in the final iteration.</p>
 		</section>
 		<section>
 			<h2>Try the classifier</h2>
-			<p>Click Start Camera and allow webcam access. Hold a bottle or notebook up to the camera. The percentages are model predictions, not guaranteed accuracy.</p>
+			<p>Click Start Camera and allow webcam access. Hold up a bottle, notebook, or another object to see the three predictions. The percentages are model predictions, not guaranteed accuracy.</p>
 			<button id="start-button" type="button">Start Camera</button>
 			<p id="status" role="status"></p>
 			<div id="webcam-container"></div>
@@ -48,7 +50,7 @@
 		</section>
 		<section>
 			<h2>Testing and limitations</h2>
-			<p>We are testing how the model responds to other water bottles and notebooks, new lighting conditions, and objects outside its two training categories. Since the model has only two classes, it may still label an unrelated object as one of them.</p>
+			<p>Our first model had only two classes and sometimes identified unrelated objects as bottles or notebooks. We added an Other / Neither class to address this problem. We still need to test the updated model with different objects, backgrounds, and lighting conditions. It can still make incorrect predictions.</p>
 		</section>
 		<section>
 			<h2>Project statement and demonstration</h2>
