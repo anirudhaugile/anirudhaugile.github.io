@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project 3 - Teachable Machine</title>
+	<link rel="stylesheet" href="stylepage.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="page-width">
+			<p class="course-label">LIS 500: Code and Power</p>
+			<h1>Project 3: Teachable Machine</h1>
+			<nav aria-label="Main navigation">
+				<ul class="nav-list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="resources.html">Implicit Bias Resources</a></li>
+					<li><a href="techhero.html">Tech Heroes</a></li>
+					<li><a class="current" aria-current="page" href="teachable-machine.html">Project 3</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="page-width">
+		<section>
+			<h2>Water Bottle or Notebook?</h2>
+			<p>By Anirudha Ugile and Lathika Suresh</p>
+			<p>This is our first iteration of an image classifier trained with Google Teachable Machine. It attempts to identify whether a webcam image shows a water bottle or a notebook.</p>
+		</section>
+		<section>
+			<h2>Training samples</h2>
+			<ul>
+				<li>Water bottle: 138 images</li>
+				<li>Notebook: 164 images</li>
+				<li>Total: 302 images</li>
+			</ul>
+			<p>These are the samples used in the current prototype. We will document individual contributions and testing in the final iteration.</p>
+		</section>
+		<section>
+			<h2>Try the classifier</h2>
+			<p>Click Start Camera and allow webcam access. Hold a bottle or notebook up to the camera. The percentages are model predictions, not guaranteed accuracy.</p>
+			<button id="start-button" type="button">Start Camera</button>
+			<p id="status" role="status"></p>
+			<div id="webcam-container"></div>
+			<div id="label-container"></div>
+			<p>If the camera cannot start, check browser permission settings and use a device with a webcam.</p>
+		</section>
+		<section>
+			<h2>Testing and limitations</h2>
+			<p>We are testing how the model responds to other water bottles and notebooks, new lighting conditions, and objects outside its two training categories. Since the model has only two classes, it may still label an unrelated object as one of them.</p>
+		</section>
+		<section>
+			<h2>Project statement and demonstration</h2>
+			<p>Our final analysis, references to <em>Unmasking AI</em>, test results, and demonstration video will be added as the project is refined.</p>
+		</section>
+		<section>
+			<h2>References and model</h2>
+			<ul>
+				<li><a href="https://teachablemachine.withgoogle.com/">Google Teachable Machine</a></li>
+				<li><a href="https://teachablemachine.withgoogle.com/models/gWkDGmb8-/">Our exported model</a></li>
+			</ul>
+		</section>
+	</main>
+	<footer><p>Anirudha Ugile, Lathika Suresh - LIS 500</p></footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+	<script>
+		// AU: Loads the exported Teachable Machine image model and displays webcam predictions.
+		const modelBaseURL = "https://teachablemachine.withgoogle.com/models/gWkDGmb8-/";
+		let model;
+		let webcam;
+		let labels;
+		let running = false;
+
+		async function startCamera() {
+			if (running) return;
+			const startButton = document.getElementById("start-button");
+			const status = document.getElementById("status");
+			startButton.disabled = true;
+			status.textContent = "Loading model and camera...";
+			try {
+				model = await tmImage.load(modelBaseURL + "model.json", modelBaseURL + "metadata.json");
+				webcam = new tmImage.Webcam(300, 300, true);
+				await webcam.setup();
+				await webcam.play();
+				document.getElementById("webcam-container").appendChild(webcam.canvas);
+				labels = document.getElementById("label-container");
+				for (let i = 0; i < model.getTotalClasses(); i++) {
+					labels.appendChild(document.createElement("p"));
+				}
+				running = true;
+				status.textContent = "Camera running. Hold up an object.";
+				window.requestAnimationFrame(loop);
+			} catch (error) {
+				console.error(error);
+				status.textContent = "The model or camera could not start. Check camera permissions and your connection.";
+				startButton.disabled = false;
+			}
+		}
+
+		async function loop() {
+			if (!running) return;
+			webcam.update();
+			const predictions = await model.predict(webcam.canvas);
+			for (let i = 0; i < predictions.length; i++) {
+				labels.children[i].textContent = predictions[i].className + ": " + (predictions[i].probability * 100).toFixed(1) + "%";
+			}
+			window.requestAnimationFrame(loop);
+		}
+
+		document.getElementById("start-button").addEventListener("click", startCamera);
+	</script>
+</body>
+</html>
