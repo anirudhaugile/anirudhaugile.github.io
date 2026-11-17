@@ -6,7 +6,7 @@
 		<title>LIS 500 Project 2</title>
 		<link rel="stylesheet" href="stylepage.css">
 	</head>
-	<body class="site-refresh site-home">
+	<body class="site-refresh site-home site-v2">
 		<!--
 		AU: This is the home page; it is designed to be a very simple portal to our LIS 500 project. I kept the structure simple so that the
 		content is not lost or difficult to follow and so that the design is not a distraction from the ideas. Navigation appears at the top of every
@@ -23,12 +23,7 @@
  </div></header>
 
 		<main class="page-width site-content">
-			<section class="home-hero"><p class="eyebrow">UW–MADISON · LIS 500 · FALL 2026</p><h1>Code shapes society.<br><span>Who shapes code?</span></h1><p class="home-hero-summary">A student-built exploration of technology, bias, power, and the decisions hidden inside digital systems.</p><a class="hero-cta" href="teachable-machine.html">Explore our live AI experiment <span aria-hidden="true">↗</span></a></section><div class="site-topic-strip" aria-label="Themes explored on this site">
- <span><b>01</b> Bias &amp; representation</span>
- <span><b>02</b> Technology &amp; power</span>
- <span><b>03</b> Responsible AI</span>
- </div>
- <section class="intro-section">
+			<section class="home-hero"><p class="eyebrow">UW–MADISON · LIS 500 · FALL 2026</p><h1>Code shapes society.<br><span>Who shapes code?</span></h1><p class="home-hero-summary">A student-built exploration of technology, bias, power, and the decisions hidden inside digital systems.</p><a class="hero-cta" href="teachable-machine.html">Explore our live AI experiment</a></section><section class="intro-section">
 				<h2>Technology is not separate from society</h2>
 				<p>
 					This site considers technology in terms of issues of power, bias, identity, and responsibility.
@@ -42,26 +37,26 @@
 				</p>
 			</section>
 
-			<section class="topic-section"><div class="section-eyebrow">01 / EXPLORE</div>
-				<h3>What you will find here</h3>
+			<section class="topic-section" aria-labelledby="explore-title">
+				<div class="section-eyebrow">01 / EXPLORE</div>
+				<div class="section-heading-line"><h2 id="explore-title">Explore the projects</h2><p>Choose a topic to learn more.</p></div>
 				<div class="topic-grid">
-					<article>
-						<div class="topic-card-top"><span class="topic-number">01</span><span class="topic-arrow" aria-hidden="true">↗</span></div><h3>About Us</h3>
-						<a href="about.html">Meet the team</a>
-					</article>
-
-					<article>
-						<div class="topic-card-top"><span class="topic-number">02</span><span class="topic-arrow" aria-hidden="true">↗</span></div><h3>Implicit Bias</h3>
-						<p>Starts with the basics of implicit bias and intersectionality then explore useful resources.</p>
-						<a href="resources.html">View the resource guide</a>
-					</article>
-
-					<article>
-						<div class="topic-card-top"><span class="topic-number">03</span><span class="topic-arrow" aria-hidden="true">↗</span></div><h3>Tech Heroes</h3>
-						<p>Read about two researchers using technology to challenge inequity, bias, and unequal access to power.</p>
-						<a href="techhero.html">View the profile</a>
-					</article>
-					<article class="feature-project"><span class="project-tag">NEW · PROJECT 03</span><div class="topic-card-top"><span class="topic-number">04</span><span class="topic-arrow" aria-hidden="true">↗</span></div><h3>Can you teach a machine?</h3><p>Try our three-class image classifier and see what happens when its predictions are challenged.</p><a href="teachable-machine.html">Open the interactive experiment</a></article>
+					<article class="feature-tile feature-tile-team"><a class="tile-link" href="about.html">
+						<div class="tile-content"><span class="tile-index">PROJECT / 01</span><h3>About Us</h3><p>Meet the students and the perspectives behind this site.</p><span class="tile-cta">Meet the team</span></div>
+						<div class="tile-art tile-art-team" aria-hidden="true"><div class="portrait-group"><span class="portrait-a">AU</span><span class="portrait-b">LS</span></div><small>OUR TEAM</small></div>
+					</a></article>
+					<article class="feature-tile feature-tile-bias"><a class="tile-link" href="resources.html">
+						<div class="tile-content"><span class="tile-index">PROJECT / 02</span><h3>Implicit Bias</h3><p>Starts with the basics of implicit bias and intersectionality, then explores useful resources.</p><span class="tile-cta">Read the resource guide</span></div>
+						<div class="tile-art tile-art-bias" aria-hidden="true"><div class="venn-art"><span></span><span></span><i></i></div><small>OVERLAPPING SYSTEMS</small></div>
+					</a></article>
+					<article class="feature-tile feature-tile-heroes"><a class="tile-link" href="techhero.html">
+						<div class="tile-content"><span class="tile-index">PROJECT / 03</span><h3>Tech Heroes</h3><p>Read about two researchers using technology to challenge inequity, bias, and unequal access to power.</p><span class="tile-cta">Explore the profiles</span></div>
+						<div class="tile-art tile-art-heroes" aria-hidden="true"><div class="lens-art"><span class="lens-circle"></span><span class="lens-core"></span><span class="lens-handle"></span><span class="lens-mark"></span></div><small>QUESTION THE DEFAULT</small></div>
+					</a></article>
+					<article class="feature-tile feature-tile-model"><a class="tile-link" href="teachable-machine.html">
+						<div class="tile-content"><span class="tile-index">PROJECT / 04</span><h3>Teachable Machine</h3><p>Try our three-class classifier and explore what happens when its predictions are challenged.</p><span class="tile-cta">Try the live experiment</span></div>
+						<div class="tile-art tile-art-model" aria-hidden="true"><div class="model-art"><span class="model-bar model-bar-a"></span><span class="model-bar model-bar-b"></span><span class="model-bar model-bar-c"></span></div><small>LIVE IMAGE MODEL</small></div>
+					</a></article>
 				</div>
 			</section>
 
@@ -76,6 +71,6 @@
 			</section>
 		</main>
 
-		<footer class="site-footer"><div class="page-width footer-inner"><div><strong>LIS 500 / Code and Power</strong><p>A student-built project at the University of Wisconsin–Madison.</p></div><div><p>Anirudha Ugile &amp; Lathika Suresh</p><a href="teachable-machine.html">Try Project 3 ↗</a></div></div></footer>
+		<footer class="site-footer"><div class="page-width footer-inner"><div><strong>LIS 500 / Code and Power</strong><p>A student-built project at the University of Wisconsin–Madison.</p></div><div><p>Anirudha Ugile &amp; Lathika Suresh</p><a href="teachable-machine.html">Try Project 3</a></div></div></footer>
 	</body>
 </html>
