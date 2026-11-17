@@ -32,11 +32,10 @@
 		<section>
 			<h2>Training samples</h2>
 			<ul>
-				<li>Water bottle: 138 images</li>
-				<li>Notebook: 164 images</li>
-				<li>Total: 302 images</li>
+				<li>Original prototype: 138 water bottle images and 164 notebook images</li>
+				<li>Updated model: retrained with an additional Other / Neither class</li>
 			</ul>
-			<p>These are the samples used in the current prototype. We will document individual contributions and testing in the final iteration.</p>
+			<p>The sample counts above describe the earlier two-class version. We will document the updated model's sample counts, individual contributions, and testing in the final iteration.</p>
 		</section>
 		<section>
 			<h2>Try the classifier</h2>
@@ -59,7 +58,7 @@
 			<h2>References and model</h2>
 			<ul>
 				<li><a href="https://teachablemachine.withgoogle.com/">Google Teachable Machine</a></li>
-				<li><a href="https://teachablemachine.withgoogle.com/models/gWkDGmb8-/">Our exported model</a></li>
+				<li><a href="https://teachablemachine.withgoogle.com/models/cSdRQ89dD/">Our exported model</a></li>
 			</ul>
 		</section>
 	</main>
@@ -69,7 +68,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 	<script>
 		// AU: Loads the exported Teachable Machine image model and displays webcam predictions.
-		const modelBaseURL = "https://teachablemachine.withgoogle.com/models/gWkDGmb8-/";
+		const modelBaseURL = "https://teachablemachine.withgoogle.com/models/cSdRQ89dD/";
 		let model;
 		let webcam;
 		let labels;
